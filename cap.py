@@ -55,7 +55,7 @@ def zoom(img, zoom_factor=1):
 
 def fetch(cam_ip,channel):
     
-    URL = "rtsp://admin:lc2-admin@" + cam_ip + ":554/cam/realmonitor?channel="+str(channel)+"&subtype=0"
+    URL = "rtsp://account:password@" + cam_ip + ":554/cam/realmonitor?channel="+str(channel)
     ipcam = ipcamCapture(URL)
     ipcam.start()
     time.sleep(1)
