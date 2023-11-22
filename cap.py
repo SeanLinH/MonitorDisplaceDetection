@@ -101,7 +101,7 @@ def fetch(cam_ip,channel):
         return None, '無影像輸出'
 
 def continue_fetch(cam_ip,channel, path):
-    URL = "rtsp://admin:lc2-admin@" + cam_ip + ":554/cam/realmonitor?channel="+str(channel)+"&subtype=0"
+    URL = "rtsp://account:password@" + cam_ip + ":554/cam/realmonitor?channel="+str(channel)
     ipcam = ipcamCapture(URL)
     ipcam.start()
     time.sleep(1)
