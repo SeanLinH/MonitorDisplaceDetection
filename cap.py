@@ -73,7 +73,7 @@ def fetch(cam_ip,channel):
         return img_lst, 'OK'
     
     except AttributeError as e:
-        URL = "rtsp://admin:lc2-admin@" + cam_ip + ":554/chID=" + str(channel) + "&streamtype=main&linkType=tcp"
+        URL = "rtsp://account:password@" + cam_ip + ":554/chID=" + str(channel) + "&streamtype=main&linkType=tcp"
         ipcam = ipcamCapture(URL)
         ipcam.start()
         time.sleep(1)
